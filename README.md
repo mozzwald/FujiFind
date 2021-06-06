@@ -1,4 +1,2 @@
-# FrogFind
-Source for the FrogFind search engine for vintage computers
-
-Love the frog. Be the frog.
+# FujiFind
+Source for the FujiFind search engine for Atari 8 Bit computers. Based on FrogFind by ActionRetro

@@ -1,5 +1,6 @@
 {
     "require": {
-        "andreskrey/readability.php": "^2.1"
+        "andreskrey/readability.php": "^2.1",
+        "league/html-to-markdown": "^5.0"
     }
 }

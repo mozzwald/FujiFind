@@ -25,7 +25,7 @@ if(isset( $_GET['q'])) { // if there's a search query, show the results for it
             // result link, redirected through our proxy
             $result_link = explode('class="result__a" href="', $result_blocks[$x])[1];
             $result_topline = explode('">', $result_link);
-            $result_link = str_replace( '//duckduckgo.com/l/?uddg=', '/read.php?a=', $result_topline[0]);
+            $result_link = str_replace( '//duckduckgo.com/l/?uddg=', 'read.php?a=', $result_topline[0]);
             // result title
             $result_title = str_replace("</a>","",explode("\n", $result_topline[1]));
             // result display url
@@ -60,15 +60,15 @@ function clean_str($str) {
 
 <html>
 <head>
-	<title>FrogFind!</title>
+	<title>FujiFind!</title>
 </head>
 <body>
 
 <?php if($show_results) { // there's a search query in q, so show search results ?>
 
-    <form action="/" method="get">
-    <a href="/"><font size=6 color="#008000">Frog</font><font size=6 color="#000000">Find!</font></a> Leap again: <input type="text" size="30" name="q" value="<?php echo urldecode($query) ?>">
-    <input type="submit" value="Ribbbit!">
+    <form action="./" method="get">
+    <a href="./"><font size=6 color="#008000">Fuji</font><font size=6 color="#000000">Find!</font></a> Leap again: <input type="text" size="30" name="q" value="<?php echo urldecode($query) ?>">
+    <input type="submit" value="Search">
     </form>
     <hr>
     <br>
@@ -77,16 +77,16 @@ function clean_str($str) {
     <?php echo $final_result_html ?>
     
 <?php } else { // no search query, so show new search ?>
-    <br><br><center><h1><font size=7><font color="#008000">Frog</font>Find!</font></h1></center>
-    <center><h3>The Search Engine for Vintage Computers</h3></center>
+    <br><br><center><h1><font size=7><font color="#008000">Fuji</font>Find!</font></h1></center>
+    <center><h3>The Search Engine for FujiNet Enabled Atari 8 Bit Computers</h3></center>
     <br><br>
     <center>
-    <form action="/" method="get">
+    <form action="./" method="get">
     Leap to: <input type="text" size="30" name="q"><br>
-    <input type="submit" value="Ribbbit!">
+    <input type="submit" value="Search">
     </center>
     <br><br><br>
-    <small><center>Built by <b><a href="https://youtube.com/ActionRetro">Action Retro</a></b> on YouTube | <a href="about.php">Why build such a thing?</a></center><br>
+    <small><center>Created by <b><a href="https://youtube.com/ActionRetro">Action Retro</a></b> | <a href="about.php">Why build such a thing?</a></center><br>
     <small><center>Powered by DuckDuckGo</center></small>
 </form>
 </form>
